@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./globals";
+
+.v2 {
+  @import "./components/header";
+  @import "./components/loading";
+  @import "./components/erros";
+  @import "./components/footer";
+
+  @import "./pages/home";
+  @import "./pages/member";
+  @import "./pages/events.scss";
+  @import "./pages/event";
+
+  background-color: var(--v2-main-bg);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -4,7 +4,7 @@ import gqlclient from "../gql/client";
 import { getMembers } from "../gql/queries";
 import { AiFillMail, AiFillInstagram } from "react-icons/ai";
 import Image from "next/image";
-
+import Head from "next/head";
 function Card({
   name,
   picurl,
@@ -68,6 +68,9 @@ export default function Member({ members }: any) {
   });
   return (
     <section id="member">
+      <Head>
+        <title>Members of Sketch</title>
+      </Head>
       <h1>The Shinobi</h1>
       <div className="member-container">
         <div className="head member-type">

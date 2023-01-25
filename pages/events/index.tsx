@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { formatDateAndTime } from "@contentful/f36-datetime";
-
+import Head from "next/head";
 function Card({
   name,
   picurl,
@@ -72,6 +72,9 @@ export default function events({ events }: any) {
   });
   return (
     <section id="events">
+      <Head>
+        <title>Events of Sketch</title>
+      </Head>
       <h2>Ninja Wars !</h2>
       <div className="events-container">
         <div className="upcomings">

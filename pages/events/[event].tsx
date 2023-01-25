@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import { formatDateAndTime } from "@contentful/f36-datetime";
 import { BLOCKS } from "@contentful/rich-text-types";
-
+import Head from "next/head";
 export default function Event({ data }: { data: any[] }) {
   console.log(data);
   if (data.length == 0) {
@@ -64,6 +64,9 @@ export default function Event({ data }: { data: any[] }) {
     };
   return (
     <div id="event-container">
+      <Head>
+        <title>{data[0].title}</title>
+      </Head>
       <div className="head-container">
         <div className="title-container">
           <h2>{data[0].title}</h2>

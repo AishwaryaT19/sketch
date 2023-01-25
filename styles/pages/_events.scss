@@ -12,7 +12,7 @@
     font-size: 6rem;
     text-transform: uppercase;
     background-image: url("/assets/images/sbg.jpg");
-    background-size: 1000px;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: 80% 47%;
     font-family: var(--v2-font-hirosh);
@@ -34,7 +34,6 @@
     z-index: -2;
     transform: rotate(180deg);
     top: 0;
-    right: -300px;
   }
   &::after {
     content: "";
@@ -70,6 +69,7 @@
         -webkit-text-fill-color: transparent;
         text-transform: uppercase;
         position: relative;
+        width: 100%;
         &::after {
           content: "-";
           inset: 3px;
@@ -78,7 +78,7 @@
           top: 60px;
           right: 9px;
           z-index: 2;
-          width: 450%;
+          width: 100%;
           background: linear-gradient(black, black) padding-box,
             linear-gradient(to right, var(--v2-color1), var(--v2-color3))
               border-box;
@@ -171,6 +171,7 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         position: relative;
+        width: 100%;
         &::after {
           content: "-";
           inset: 3px;
@@ -179,7 +180,7 @@
           top: 60px;
           right: 7px;
           z-index: 2;
-          width: 900%;
+          width: 100%;
           background: linear-gradient(black, black) padding-box,
             linear-gradient(to right, var(--v2-color2), var(--v2-color4))
               border-box;
@@ -237,6 +238,115 @@
             0px 0px 60px 10px var(--v2-color4),
             inset 0px 0px 10px 10px var(--v2-color2),
             inset 0px 0px 20px 10px var(--v2-color4);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  #events {
+    padding: 2% 5%;
+    overflow: hidden;
+    width: 100%;
+    h2 {
+      font-size: 2rem;
+      align-self: center;
+      background-position: 87% 45%;
+    }
+    .events-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+
+      .upcomings {
+        margin: 8% 4%;
+        width: 90%;
+        & > h3 {
+          font-size: 1.5rem;
+          position: relative;
+          &::after {
+            content: "-";
+            inset: 3px;
+            display: inline-block;
+            position: absolute;
+            top: 27px;
+            right: 0px;
+            z-index: 2;
+            width: 95%;
+            background: linear-gradient(black, black) padding-box,
+              linear-gradient(to right, var(--v2-color1), var(--v2-color3))
+                border-box;
+            border: 3px solid transparent;
+          }
+        }
+        & > .cards-container {
+          .cardu {
+            width: 90%;
+            height: 60%;
+            margin: 8% 2%;
+            .img-container {
+              width: 40%;
+              // height: 100%;
+            }
+            .stuff-container {
+              width: 60%;
+              height: 100%;
+              margin-top: 3%;
+              & > h3 {
+                font-size: 1.3rem;
+              }
+              & > span {
+                font-size: 0.6rem;
+              }
+            }
+          }
+        }
+      }
+      .pasts {
+        padding: 2% 5%;
+        width: 100%;
+        margin-top: 0.5%;
+        & > h3 {
+          font-size: 1.5rem;
+          position: relative;
+          &::after {
+            content: "-";
+            inset: 3px;
+            display: inline-block;
+            position: absolute;
+            top: 27px;
+            right: 0px;
+            z-index: 2;
+            width: 95%;
+            background: linear-gradient(black, black) padding-box,
+              linear-gradient(to right, var(--v2-color2), var(--v2-color4))
+                border-box;
+            border: 3px solid transparent;
+          }
+        }
+        .cards-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          width: 100%;
+          height: auto;
+          gap: 8px;
+          justify-items: center;
+          margin-top: 2%;
+          .cardp {
+            height: 22vh;
+            width: 95%;
+            padding: 5%;
+            .stuff-container {
+              margin-top: 15%;
+              & > h3 {
+                font-size: 1rem;
+                align-self: center;
+              }
+            }
+          }
         }
       }
     }
